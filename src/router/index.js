@@ -39,6 +39,18 @@ export const asyncRoutes = {
         meta: { title: '表格' },
         component: () => import('../views/T1.vue'),
     },
+    t2: {
+        path: 't2',
+        name: 't2',
+        meta: { title: '食谱表格' },
+        component: () => import('../views/t2.vue'),
+    },
+    // veg: {
+    //     path: 'veg',
+    //     name: 'veg',
+    //     meta: { title: '时令菜' },
+    //     component: () => import('../views/veg.vue'),
+    // },
     password: {
         path: 'password',
         name: 'password',

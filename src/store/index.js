@@ -15,21 +15,9 @@ const store = new Vuex.Store({
                 text: '主页', // 文本内容
             },
             {
-                name: 'other', // 要跳转的路由名称 不是路径
                 size: 18, // icon大小
-                type: 'ios-egg-outline', // icon类型
-                text: '单独的路由', // 点击侧边栏跳到一个单独的路由页面，需要提前在 router.js 定义
-            },
-            {
-                size: 18, // icon大小
-                type: 'md-arrow-forward', // icon类型
-                text: '外链',
-                url: 'https://www.baidu.com',
-                isExternal: true, // 外链 跳到一个外部的 URL 页面
-            },
-            {
-                text: '二级菜单',
-                type: 'ios-paper',
+                type: 'md-home', // icon类型
+                text: '首页配置', // 点击侧边栏跳到一个单独的路由页面，需要提前在 router.js 定义
                 children: [
                     {
                         type: 'ios-grid',
@@ -38,15 +26,43 @@ const store = new Vuex.Store({
                         // hidden 属性 隐藏此菜单 可以通过在地址栏上输入对应的 URL 来显示页面
                         // hidden: true,
                     },
+                ]
+            },
+            {
+                text: '数据管理',
+                size: 18,
+                type: 'md-home',
+                children: [
+                    // {
+                    //     type: 'ios-grid',
+                    //     name: 't1',
+                    //     text: '表格',
+                    //     // hidden 属性 隐藏此菜单 可以通过在地址栏上输入对应的 URL 来显示页面
+                    //     // hidden: true,
+                    // },
                     {
-                        size: 18, // icon大小
-                        type: 'md-arrow-forward', // icon类型
-                        text: '外链',
-                        url: 'https://www.baidu.com',
-                        isExternal: true, // 外链 跳到一个外部的 URL 页面
+                        type: 'ios-grid',
+                        name: 't2',
+                        text: '食谱表格',
+                        // hidden 属性 隐藏此菜单 可以通过在地址栏上输入对应的 URL 来显示页面
+                        // hidden: true,
                     },
+                    // {
+                    //     type: 'ios-grid',
+                    //     name: 'veg',
+                    //     text: '时令菜',
+                    //     // hidden 属性 隐藏此菜单 可以通过在地址栏上输入对应的 URL 来显示页面
+                    //     // hidden: true,
+                    // },
+                    // {
+                    //     size: 18, // icon大小
+                    //     type: 'md-arrow-forward', // icon类型
+                    //     text: '外链',
+                    //     url: 'https://www.baidu.com',
+                    //     isExternal: true, // 外链 跳到一个外部的 URL 页面
+                    // },
                     {
-                        text: '三级菜单',
+                        text: '用户管理',
                         type: 'ios-paper',
                         children: [
                             {
@@ -63,13 +79,6 @@ const store = new Vuex.Store({
                                 type: 'md-person',
                                 name: 'userinfo',
                                 text: '基本资料',
-                            },
-                            {
-                                size: 18, // icon大小
-                                type: 'md-arrow-forward', // icon类型
-                                text: '外链',
-                                url: 'https://www.baidu.com',
-                                isExternal: true, // 外链 跳到一个外部的 URL 页面
                             },
                         ],
                     },

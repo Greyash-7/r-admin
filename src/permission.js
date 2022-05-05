@@ -1,7 +1,8 @@
 import { LoadingBar } from 'view-design'
+import createRoutes from '@/utils/createRoutes'
 import router from './router'
 import store from './store'
-import createRoutes from '@/utils/createRoutes'
+
 import { getDocumentTitle, resetTokenAndClearUser } from './utils'
 
 // 是否有菜单数据
@@ -22,6 +23,9 @@ router.beforeEach(async (to, from, next) => {
                 const routes = createRoutes(store.state.menuItems)
                 // 动态添加路由
                 router.addRoutes(routes)
+                // routes.foreach(item => {
+                //     router.addRoute(item)
+                // })
                 hasMenus = true
                 next({ path: to.path || '/' })
             } catch (error) {
